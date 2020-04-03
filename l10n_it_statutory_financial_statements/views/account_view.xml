@@ -50,6 +50,20 @@
         </field>
     </record>
 
+    <record id="view_account_group_form_inherit" model="ir.ui.view">
+        <field name="name">view.account.group.form.inherit</field>
+        <field name="model">account.group</field>
+        <field name="inherit_id" ref="account_group_menu.view_account_group_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@id='links']" position="after">
+                <group name="cee_groups">
+                    <label for="cee_account_ids"/>
+                    <field name="cee_account_ids" widget="many2many" nolabel="1" options="{'no_create_edit': True}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
     <record id="account.action_account_group_tree" model="ir.actions.act_window">
         <field name="context">{'search_default_not_cee_group': 1}</field>
     </record>

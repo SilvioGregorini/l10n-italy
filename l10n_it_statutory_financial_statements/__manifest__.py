@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2019 Lorenzo Battistini
 # Copyright 2019 Alessandro Camilli
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
@@ -18,6 +17,7 @@
     "installable": True,
     "depends": [
         "account_financial_report",
+        "account_group_menu",
         "l10n_it_account",
     ],
     "data": [
@@ -26,6 +26,4 @@
         "data/cee_groups.xml",
         "report/templates/trial_balance.xml",
     ],
-    "qweb": [
-    ]
 }
